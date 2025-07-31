@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* → define suas variáveis de tema como custom properties */
+@theme {
+  /* background da página */
+  --color-bg: #1F2937;        /* gray‑800 */
+  /* bordas genéricas */
+  --color-border: #D1D5DB;    /* gray‑300 */
+  /* fundo de inputs e botões secundários */
+  --color-surface: #F9FAFB;   /* gray‑50 */
+  /* campo de formulário */
+  --color-input-bg: #D1FAE5;  /* green‑100 */
+  /* botão primário e textos principais */
+  --color-primary: #059669;   /* emerald‑600 */
+  --color-primary-dark: #047857; /* emerald‑700 */
+  --color-primary-light: #10B981;/* emerald‑500 */
+  /* foco em inputs */
+  --color-ring-focus: #10B981;   /* emerald‑500 */
+  /* hover de botão “Enter” */
+  --color-btn-hover: #A7F3D0;  /* green‑200 */
+}
+
+/* exemplo de utilização em layer base para reaproveitar como utilitário */
+@layer base {
+  :root {
+    /* opcional: expõe as variáveis no :root para uso fora do @theme */
+    --bg: var(--color-bg);
+    --bd: var(--color-border);
+    --sf: var(--color-surface);
+    --in-bg: var(--color-input-bg);
+    --pri: var(--color-primary);
+    --pri-dark: var(--color-primary-dark);
+    --pri-light: var(--color-primary-light);
+    --ring: var(--color-ring-focus);
+    --btn-h: var(--color-btn-hover);
+  }
+}
