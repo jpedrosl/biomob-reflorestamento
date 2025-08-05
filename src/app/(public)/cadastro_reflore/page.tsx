@@ -1,14 +1,14 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+'use client';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import React from 'react';
+import RegisterRefloreForm from "../../../components/forms/register-reflore-form"; 
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
-const eslintConfig = [...compat.extends("next/core-web-vitals")];
-
-export default eslintConfig;
+export default function CadastroReflorePage() {
+  return (
+    <main className="min-h-screen bg-[#F5F5F5] flex items-center justify-center p-4">
+      <div className="max-w-2xl w-full">
+        <RegisterRefloreForm />
+      </div>
+    </main>
+  );
+}
