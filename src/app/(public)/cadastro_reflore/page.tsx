@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import RegisterRefloreForm from "../../../components/forms/register-reflore-form"; 
+import RegisterRefloreForm from "../../../components/forms/register-reflore-form"; // Caminho corrigido
 
 export default function CadastroReflorePage() {
   return (
